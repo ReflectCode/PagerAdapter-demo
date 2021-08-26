@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" >
+    <device id="retina5_5" orientation="portrait" appearance="light">
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+            <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+            <objects>
+                                <view id="RC-ID-30001" contentMode="scaleToFill" clipsSubviews="YES" userLabel="RC-ID-30001" tag="30001" horizontalHuggingPriority="200" verticalHuggingPriority="200" opaque="NO" >
+                                        <rect key="frame" x="0" y="0" width="414" height="636"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/> <nil key="simulatedTopBarMetrics"/>
+                                         <nil key="simulatedBottomBarMetrics"/> <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/> <point key="canvasLocation" x="100" y="100"/>
+                                        <subviews>
+                                <label  textAlignment="left" lineBreakMode="middleTruncation" id="textView" userLabel="textView" tag="20002" contentMode="scaleToFill" clipsSubviews="YES" text="Tab 2" numberOfLines="0" customClass="RCUILabel" customModuleProvider="target" userInteractionEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" baselineAdjustment="alignBaselines" horizontalHuggingPriority="350" verticalHuggingPriority="350" minimumFontSize="20" opaque="NO" >
+                                    <rect key="frame" x="180" y="303" width="53" height="30"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                    <color key="textColor" red="0" green="0" blue="0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="textView-Height-Eq-30"/>
+                                    </constraints>
+                                </label> 
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="textView" firstAttribute="trailing" secondItem="RC-ID-30001" secondAttribute="trailing" relation="lessThanOrEqual" constant="-8" userLabel="textView-TrailingLessThanParent" id="textView-TrailingLessThanParent"/>
+                                <constraint firstItem="textView" firstAttribute="centerX" secondItem="RC-ID-30001" secondAttribute="centerX" constant="-1" userLabel="textView-alignCenterHorizontal-inContainer" id="textView-alignCenterHorizontal-inContainer"/>
+                                <constraint firstItem="textView" firstAttribute="centerY" secondItem="RC-ID-30001" secondAttribute="centerY" constant="-112" userLabel="textView-alignCenterVertical-inContainer" id="textView-alignCenterVertical-inContainer"/>
+                            </constraints>
+                            </view>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+<placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UIViewController"> <connections>  <outlet property="view" destination="RC-ID-30001" id="RC-ID-30001-root-view"/> </connections> </placeholder>
+            </objects>
+</document>

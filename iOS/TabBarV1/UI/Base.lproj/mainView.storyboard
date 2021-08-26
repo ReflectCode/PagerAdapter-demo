@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TabBarV1-NavControl">
+    <device id="retina5_5" orientation="portrait" appearance="light">
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+            <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+        <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="DNV-xg-evK">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TabBarV1-NavControl" sceneMemberID="viewController"> 
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <navigationBar id="ulm-4h-Ru3" key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO">
+                        <rect key="frame" x="0.0" y="0.0" width="414.0" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/> 
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <toolbar key="toolbar" id="TabBarV1-ToolBar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue id="hC6-UQ-eHy" destination="MainViewController" kind="relationship" relationship="rootViewController"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ccE-g8-4ju" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1122" y="600"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="MainViewController-Scene" >
+            <objects>
+                <viewController id="MainViewController" storyboardIdentifier="MainViewController" userLabel="MainViewController" customClass="MainViewController" customModule="TabBarV1" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" title="TabBarV1" id="MainViewController-Nav-ID"/>
+                    <barButtonItem key="backBarButtonItem" title="Back" id="Back-btn-ID"/>
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="Root-View" id="MainView" userLabel="MainView">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <viewLayoutGuide key="safeArea" id="MainView-safeArea"/>
+                        <subviews>
+                                <view id="main-layout" contentMode="scaleToFill" clipsSubviews="YES" userLabel="main-layout" translatesAutoresizingMaskIntoConstraints="NO" tag="10001" horizontalHuggingPriority="200" verticalHuggingPriority="200" opaque="NO" >
+                                        <rect key="frame" x="0" y="0" width="414" height="636"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <subviews>
+                                    <view id="tab-layout" contentMode="scaleToFill" clipsSubviews="YES" userLabel="tab-layout" translatesAutoresizingMaskIntoConstraints="NO" tag="10002" horizontalHuggingPriority="200" customClass="Segmentio"  customModule="Segmentio" opaque="NO" >
+                                            <rect key="frame" x="0" y="0" width="414" height="56"/>
+                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="0" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="height" priority="200" constant="56" id="tab-layout-Height-placeHolder" />
+                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="56" id="tab-layout-Height-Eq-56"/> 
+            </constraints>
+                                            </view>
+                                <containerView id="pager" userLabel="pager" tag="10003" contentMode="scaleToFill" clipsSubviews="YES" translatesAutoresizingMaskIntoConstraints="NO" opaque="NO" >
+                                    <rect key="frame" x="0" y="56" width="414" height="580"/>
+                                    <connections>
+                                        <segue destination="pager-content" kind="embed" id="pager-segue-ID"/>
+                                    </connections>
+                                </containerView>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="tab-layout" firstAttribute="leading" secondItem="main-layout" secondAttribute="leading" relation="equal" constant="0" userLabel="tab-layout-matchLeading-main-layout" id="tab-layout-matchLeading-main-layout"/>
+                                <constraint firstItem="tab-layout" firstAttribute="trailing" secondItem="main-layout" secondAttribute="trailing"  constant="0" userLabel="tab-layout-matchTrailingTo" id="tab-layout-matchTrailingTo-main-layout" />
+                                <constraint firstItem="tab-layout" firstAttribute="top" secondItem="main-layout" secondAttribute="top" userLabel="tab-layout-top-main-layout" id="tab-layout-top-main-layout"/>
+                                <constraint firstItem="pager" firstAttribute="bottom" secondItem="main-layout" secondAttribute="bottom" relation="equal" constant="0" userLabel="pager-matchBottom-main-layout" id="pager-matchBottom-main-layout" />
+                                <constraint firstItem="pager" firstAttribute="trailing" secondItem="main-layout" secondAttribute="trailing" relation="equal" constant="0" userLabel="pager-matchTrailing-main-layout" id="pager-matchTrailing-main-layout"/>
+                                <constraint firstItem="pager" firstAttribute="leading" secondItem="main-layout" secondAttribute="leading" userLabel="pager-leading-main-layout" id="pager-leading-main-layout"/>
+                                <constraint firstItem="pager" firstAttribute="top" secondItem="tab-layout" secondAttribute="bottom" constant="0" userLabel="pager-below-tab-layout" id="pager-below-tab-layout"/>
+                            </constraints>
+                            </view>
+                        <view clipsSubviews="YES" tag="98989800000" contentMode="scaleToFill" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" restorationIdentifier="Footer-View" translatesAutoresizingMaskIntoConstraints="NO" id="Footer-View-ID" userLabel="Footer-View" customModule="BottomSheet" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="736" width="414" height="0.0"/>
+                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" priority="1000" constant="0" id="Footer-View-Height"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" tag="98989800002" id="KB-Tracking-View" customClass="KeyboardTrackingView" customModule="GallarySample" customModuleProvider="target">
+                         <rect key="frame" x="0.0" y="736" width="414" height="0.0"/>
+                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                         <constraints>
+                             <constraint firstAttribute="height" priority="750" id="KB-Tracking-View-Height"/>
+                         </constraints>
+                        </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="main-layout" firstAttribute="top" secondItem="MainView-safeArea" secondAttribute="top" relation="equal" constant="0" userLabel="main-layout-matchTop-MainView-safeArea" id="main-layout-matchTop-MainView-safeArea" />
+                            <constraint firstItem="main-layout" firstAttribute="bottom" secondItem="MainView-safeArea" secondAttribute="bottom" priority="750" id="main-layout-bottom-Eq-bottom-safe-area"/>
+                            <constraint firstItem="main-layout" firstAttribute="trailing" secondItem="MainView-safeArea" secondAttribute="trailing"  constant="0" userLabel="main-layout-matchTrailingTo-safeArea" id="main-layout-matchTrailingTo-MainView-safeArea" />
+                            <constraint firstItem="Footer-View-ID" firstAttribute="top" secondItem="main-layout" secondAttribute="bottom" id="footer-match-top-main-layout"  priority="1000" relation="equal" constant="0" userLabel="footer-match-top-main-layout"/>
+                            <constraint firstItem="main-layout" firstAttribute="leading" secondItem="MainView-safeArea" secondAttribute="leading" userLabel="main-layout-leading-MainView" id="main-layout-leading-MainView"/>
+                            <constraint firstItem="Footer-View-ID" firstAttribute="leading" secondItem="MainView-safeArea" secondAttribute="leading" id="footer-match-leading"/>
+                            <constraint firstItem="Footer-View-ID" firstAttribute="trailing" secondItem="MainView-safeArea" secondAttribute="trailing" id="footer-match-trailing"/>
+                            <constraint firstItem="Footer-View-ID" firstAttribute="bottom" secondItem="KB-Tracking-View" secondAttribute="top" id="KB-Tracking-View-top"/>
+                            <constraint firstItem="KB-Tracking-View" firstAttribute="leading" secondItem="MainView-safeArea" secondAttribute="leading" id="KB-Tracking-View-leading"/>
+                            <constraint firstItem="KB-Tracking-View" firstAttribute="bottom" secondItem="MainView-safeArea" secondAttribute="bottom" id="KB-Tracking-View-bottom"/>
+                            <constraint firstItem="KB-Tracking-View" firstAttribute="trailing" secondItem="MainView-safeArea" secondAttribute="trailing" id="KB-Tracking-View-trailing"/>
+                        </constraints>
+                        </view>
+                    <connections>
+                        <outlet property="main_layout" destination="main-layout" id="main-layout-Outlet1"/>
+                        <outlet property="tab_layout" destination="tab-layout" id="tab-layout-Outlet1"/>
+                        <outlet property="pager" destination="pager" id="pager-Outlet1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MainActivity-First-Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-372" y="600"/>
+        </scene>
+        <!--Page View Controller-->
+        <scene sceneID="pager-content-scene">
+            <objects>
+                <pageViewController storyboardIdentifier="pager-content" autoresizesArchivedViewToFullSize="NO" useStoryboardIdentifierAsRestorationIdentifier="YES"
+                          transitionStyle="pageCurl"
+                          pageSpacing="0"
+                          navigationOrientation="horizontal"
+                          spineLocation="none"
+                          id="pager-content" sceneMemberID="viewController">
+                      <size key="freeformSize" width="414" height="580"/>
+                </pageViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder"
+                    id="pager-placeHolderID"
+                    userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="450" y="600"/>
+    </scene>
+
+    </scenes>
+</document>
